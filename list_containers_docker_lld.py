@@ -43,8 +43,9 @@ def main():
         if first == 0:
             print ",\n"
         first = 0
+        Name = container['Names']
         #print "\t{",  "\"{#CONTAINERID}\":\"",container['Id'],"\",","\"{#name}\":\"",container['Id'],"\"}"
-        print "\t{",  "\"{#NAME}\":",container['Names'],"}"
+        print "\t{",  "\"{#NAME}\":\"",str(Name)[4:-2],"\"}"
 
     print "\n\t]\n"
     print "}\n"
