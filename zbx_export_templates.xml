@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-04-26T13:35:06Z</date>
+    <date>2015-04-26T17:16:52Z</date>
     <groups>
+        <group>
+            <name>Docker containers</name>
+        </group>
+        <group>
+            <name>Linux servers</name>
+        </group>
         <group>
             <name>Templates</name>
         </group>
@@ -512,7 +518,31 @@
                     <item_prototypes/>
                     <trigger_prototypes/>
                     <graph_prototypes/>
-                    <host_prototypes/>
+                    <host_prototypes>
+                        <host_prototype>
+                            <host>{#NAME}</host>
+                            <name>{#NAME}</name>
+                            <status>0</status>
+                            <group_links>
+                                <group_link>
+                                    <group>
+                                        <name>Linux servers</name>
+                                    </group>
+                                </group_link>
+                                <group_link>
+                                    <group>
+                                        <name>Docker containers</name>
+                                    </group>
+                                </group_link>
+                            </group_links>
+                            <group_prototypes/>
+                            <templates>
+                                <template>
+                                    <name>Template Docker Containers</name>
+                                </template>
+                            </templates>
+                        </host_prototype>
+                    </host_prototypes>
                 </discovery_rule>
             </discovery_rules>
             <macros/>
