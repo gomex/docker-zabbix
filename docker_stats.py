@@ -5,7 +5,6 @@ import sys
 from docker import Client
 from optparse import OptionParser
 import json
-from zabbix.api import ZabbixAPI
 from zabbix.sender import ZabbixMetric, ZabbixSender
 
 class DockerService(object):
