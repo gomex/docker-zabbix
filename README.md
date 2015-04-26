@@ -75,4 +75,6 @@ Check which port was mapped to tcp/80
 # docker ps | grep "docker-zabbix"
 ```
 
+# Inspiration
 
+I decided create this solution after read that [news](http://www.rackspace.com/blog/addressing-hybrid-architecture-complexity-with-new-docker-monitoring-plugin/) and used part of code to start my own.
