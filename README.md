@@ -54,6 +54,9 @@ or
 # chmod u+x /etc/zabbix/*.py
 # echo "zabbix ALL=NOPASSWD: /etc/zabbix/list_containers_docker_lld.py" >> /etc/sudoers
 # echo "*/5 * * * *   root /etc/zabbix/docker_stats.py" > /etc/cron.d/docker-zabbix
+# apt-get install zabbix-agent
+# echo "EnableRemoteCommands=1" >> /etc/zabbix/zabbix_agentd.conf
+# /etc/init.d/zabbix-agent restart
 ```
 
 ## Zabbix server
