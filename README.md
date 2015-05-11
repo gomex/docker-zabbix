@@ -4,9 +4,9 @@ Monitor resource used by running containers
 
 # TODO
 
-* Get informations about percent used CPU, percent used RAM memory and network (DONE!) 
-* Add options to get information from all containers and not only using id container (DONE!)
-* Create zabbix module
+- [x] Get informations about percent used CPU, percent used RAM memory and network 
+- [x] Add options to get information from all containers and not only using id container
+- [ ] Create zabbix module
 
 # Requirements
 
