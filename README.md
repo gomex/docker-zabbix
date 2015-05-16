@@ -10,7 +10,7 @@ Monitor resource used by running containers
 
 # Requirements
 
-## install all libraies (docker-py and py-zabbix)
+## install all libraries (docker-py and py-zabbix)
 ```
 # pip install -r requirements.txt
 ```
