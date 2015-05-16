@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-05-16T00:34:31Z</date>
+    <date>2015-05-16T01:10:16Z</date>
     <groups>
         <group>
             <name>Discovered hosts</name>
@@ -485,7 +485,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>system.run[/usr/bin/sudo /etc/zabbix/list_containers_docker_lld.py]</key>
+                    <key>system.run[/usr/bin/sudo /etc/zabbix/docker_stats.py -l]</key>
                     <delay>60</delay>
                     <status>0</status>
                     <allowed_hosts/>

@@ -59,7 +59,7 @@ or
 # cp *.py /etc/zabbix
 # chowm -R zabbix /etc/zabbix/
 # chmod u+x /etc/zabbix/*.py
-# echo "zabbix ALL=NOPASSWD: /etc/zabbix/list_containers_docker_lld.py" >> /etc/sudoers
+# echo "zabbix ALL=NOPASSWD: /etc/zabbix/docker_stats.py -l" >> /etc/sudoers
 # echo "*/5 * * * *   root /etc/zabbix/docker_stats.py" > /etc/cron.d/docker-zabbix
 # apt-get install zabbix-agent
 # echo "EnableRemoteCommands=1" >> /etc/zabbix/zabbix_agentd.conf
@@ -76,13 +76,19 @@ or
 
 ```
 # docker pull berngp/docker-zabbix
-# docker run -d -P berngp/docker-zabbix
+# docker run --name zabbix-server -d -P berngp/docker-zabbix
 ```
 
 Check which port was mapped to tcp/80
 
 ``` 
 # docker ps | grep "docker-zabbix"
+```
+
+Check which ip was mapped to new zabbix server container and put in your zabbix-agent conf file
+
+```
+# docker inspect zabbix-server | grep -i ipaddress
 ```
 
 # Inspiration
