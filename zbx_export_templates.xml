@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-04-26T17:16:52Z</date>
+    <date>2015-05-16T00:34:31Z</date>
     <groups>
         <group>
-            <name>Docker containers</name>
-        </group>
-        <group>
-            <name>Linux servers</name>
+            <name>Discovered hosts</name>
         </group>
         <group>
             <name>Templates</name>
@@ -489,7 +486,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>system.run[/usr/bin/sudo /etc/zabbix/list_containers_docker_lld.py]</key>
-                    <delay>600</delay>
+                    <delay>60</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -526,12 +523,7 @@
                             <group_links>
                                 <group_link>
                                     <group>
-                                        <name>Linux servers</name>
-                                    </group>
-                                </group_link>
-                                <group_link>
-                                    <group>
-                                        <name>Docker containers</name>
+                                        <name>Discovered hosts</name>
                                     </group>
                                 </group_link>
                             </group_links>
