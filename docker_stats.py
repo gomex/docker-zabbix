@@ -67,7 +67,7 @@ class DockerService(object):
 
         return cpuPercent
 
-    def calculateupercentusedmemory(self, container):
+    def calculate_upercent_used_memory(self, container):
 
         stats = self.docker_stats(container)
         used_memory = stats['memory_stats']['usage']
