@@ -56,7 +56,7 @@ class DockerService(object):
             print 'status err failed to obtain docker container stats.'
             sys.exit(1)
 
-    def calculateCPUPercent(self, previousCPU, previousSystem, container):
+    def calculate_cpu_percent(self, previousCPU, previousSystem, container):
         cpuPercent = 0.0
         stats = self.docker_stats(container)
         cpuDelta = float(stats['cpu_stats']['cpu_usage']['total_usage']) - previousCPU
