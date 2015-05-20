@@ -6,7 +6,10 @@ Monitor resource used by running containers
 
 - [x] ~~Get informations about percent used CPU, percent used RAM memory and network~~ 
 - [x] ~~Add options to get information from all containers and not only using id container~~
+- [x] ~~Create DockerService package~~
+- [ ] Write tests for package
 - [ ] Create zabbix module
+- [ ] Create python package, to install with pip
 
 # Requirements
 
