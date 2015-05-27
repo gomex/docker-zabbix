@@ -9,22 +9,15 @@ parser.add_option('-l', action="store_true", dest="list", default=False)
 # Docker access
 docker_service = DockerService.DockerService(opts.url)
 containerslist = docker_service.list_containers()
-if opts.list == True :
-    first = 1;
-    print "{\n";
-    print "\t\"data\":[\n";
-
+if opts.list == True:
+    import json
+    con_list=[]
     for container in containerslist:
-
-        if first == 0:
-            print ",\n"
-        first = 0
         Name = container['Names']
-        #print "\t{",  "\"{#CONTAINERID}\":\"",container['Id'],"\",","\"{#name}\":\"",container['Id'],"\"}"
-        print "\t{",  "\"{#NAME}\":\"",str(Name)[4:-2],"\"}"
-
-    print "\n\t]\n"
-    print "}\n"  
+        con_list.append({'{#NAME}':str(Name)[4:-2]})
+    con_dict = {}
+    con_dict['data'] = con_list
+    print(json.dumps(con_dict))
 else :
     for container in containerslist:
         Name = container['Names']
