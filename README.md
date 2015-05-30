@@ -64,10 +64,10 @@ or
 # chowm -R zabbix /etc/zabbix/
 # chmod u+x /etc/zabbix/*.py
 # echo 'Defaults:username !requiretty' >> /etc/sudoers
-# echo "zabbix ALL=NOPASSWD: /etc/zabbix/docker_stats.py -l" >> /etc/sudoers
-# echo "*/5 * * * *   root /etc/zabbix/docker_stats.py" > /etc/cron.d/docker-zabbix
+# echo "zabbix ALL=NOPASSWD: /etc/zabbix/docker_stats.py" >> /etc/sudoers
 # apt-get install zabbix-agent
 # echo "EnableRemoteCommands=1" >> /etc/zabbix/zabbix_agentd.conf
+# echo "Timeout=30" >> /etc/zabbix/zabbix_agentd.conf
 # /etc/init.d/zabbix-agent restart
 ```
 
