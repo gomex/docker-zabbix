@@ -39,7 +39,7 @@ class DockerService(object):
         docker_conn = Client(base_url=self.url)
 
         try:
-            stats = docker_conn.stats(container)
+            stats = docker_conn.stats(container, True)
             self.docker_running = True
         # Apologies for the broad exception, it just works here.
         except Exception:
@@ -48,10 +48,10 @@ class DockerService(object):
         if self.docker_running:
             # print 'status ok succeeded in obtaining docker container stats.'
             for stat in stats:
-                s = json.loads(stat)
+                s = json.loads(json.dumps(stat))
                 return s
         else:
-            print 'status err failed to obtain docker container stats.'
+            print('status err failed to obtain docker container stats.')
             sys.exit(1)
 
     def calc_cpu_perc(self, prevCPU, prevSystem, container):

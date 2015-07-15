@@ -48,6 +48,8 @@ else:
         rx_errors = stats['network']['rx_errors']
         tx_errors = stats['network']['tx_errors']
 
+        print(stats)
+
         packet = [
           DockerService.ZabbixMetric(Name, key_cpu_used, round(CPUPerc, 2)),
           DockerService.ZabbixMetric(Name, key_mem_used, PercMemUsed),
