@@ -46,6 +46,19 @@ or
 # cd py-zabbix
 # python setup.py install
 ```
+### Debian problem to use pip
+
+To fix this problem
+
+```
+ImportError: cannot import name 'IncompleteRead'
+```
+
+Reinstall pip package
+
+```
+easy_install -U pip
+```
 
 ## Packages used
 
@@ -95,6 +108,36 @@ Check which ip was mapped to new zabbix server container and put in your zabbix-
 ```
 # docker inspect zabbix-server | grep -i ipaddress
 ```
+
+# Using python3
+
+To use python 3 is necessary install pip for python3
+
+```
+# aptitude install python3-pip
+```
+
+And install its requiriments
+
+```
+# pip3 install -r requirements.txt
+
+```
+
+## Debian problem to use pip
+
+To fix this problem
+
+```
+ImportError: cannot import name 'IncompleteRead'
+```
+
+Reinstall pip package
+
+```
+easy_install3 -U pip
+```
+
 
 # Inspiration
 

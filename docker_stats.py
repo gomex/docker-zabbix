@@ -12,6 +12,7 @@ containerslist = docker_service.list_containers()
 if opts.list:
     import json
     con_list = []
+    ## TODO: implement None return handle
     for container in containerslist:
         Name = container['Names']
         con_list.append({'{#NAME}': str(Name)[4:-2]})
