@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#
+
 from docker_service import DockerService
 
 parser = DockerService.OptionParser()
@@ -48,7 +51,8 @@ else:
         rx_errors = stats['network']['rx_errors']
         tx_errors = stats['network']['tx_errors']
 
-        print(stats)
+        ## Debug 
+        #print(stats)
 
         packet = [
           DockerService.ZabbixMetric(Name, key_cpu_used, round(CPUPerc, 2)),
