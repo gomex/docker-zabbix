@@ -71,14 +71,14 @@ easy_install -U pip
 ## Docker host server
 
 ```
-# git clone git@gitlab.com:Gomex/docker-monitor.git
-# cd docker-monitor
+# apt-get install zabbix-agent sudo
+# git clone git@gitlab.com:Gomex/docker-zabbix.git
+# cd docker-docker
 # cp *.py /etc/zabbix
 # chowm -R zabbix /etc/zabbix/
 # chmod u+x /etc/zabbix/*.py
 # echo 'Defaults:username !requiretty' >> /etc/sudoers
 # echo "zabbix ALL=NOPASSWD: /etc/zabbix/docker_stats.py" >> /etc/sudoers
-# apt-get install zabbix-agent
 # echo "EnableRemoteCommands=1" >> /etc/zabbix/zabbix_agentd.conf
 # echo "Timeout=30" >> /etc/zabbix/zabbix_agentd.conf
 # /etc/init.d/zabbix-agent restart
