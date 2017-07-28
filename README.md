@@ -75,7 +75,7 @@ easy_install -U pip
 # git clone git@gitlab.com:Gomex/docker-zabbix.git
 # cd docker-docker
 # cp *.py /etc/zabbix
-# chowm -R zabbix /etc/zabbix/
+# chown -R zabbix /etc/zabbix/
 # chmod u+x /etc/zabbix/*.py
 # echo 'Defaults:username !requiretty' >> /etc/sudoers
 # echo "zabbix ALL=NOPASSWD: /etc/zabbix/docker_stats.py" >> /etc/sudoers
